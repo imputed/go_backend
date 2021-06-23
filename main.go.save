@@ -1,0 +1,103 @@
+package main
+
+import (
+	"context"
+	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
+	"log"
+	"net/http"
+	"time"
+)
+
+func returnGet(c *gin.Context) {
+	name := c.Param("name")
+	c.String(http.StatusOK, "Hello %s", name)
+
+}
+
+func getAllUsers(c  *gin.Context) {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27017"))
+	defer func() {
+		if err = client.Disconnect(ctx); err != nil {
+			panic(err)
+		}
+	}()
+
+	collection := client.Database("test").Collection("games")
+	cur, err := collection.Find(ctx, bson.M{"players":"60cdbb8f068c9b20ecfbfdaf"})
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer cur.Close(ctx)
+	re := []bson.D{}
+	for cur.Next(ctx) {
+		var result bson.D
+		err := cur.Decode(&result)
+		if err != nil {
+			log.Fatal(err)
+		} else {
+			re = append(re, result)
+		}
+		if err := cur.Err(); err != nil {
+			log.Fatal(err)
+		}
+	}
+	c.JSON(200, gin.H{
+		"results":re,
+	})
+}
+
+
+func getUsers(c  *gin.Context) {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27017"))
+	defer func() {
+		if err = client.Disconnect(ctx); err != nil {
+			panic(err)
+		}
+	}()
+
+	collection := client.Database("test").Collection("users")
+	cur, err := collection.Find(ctx, bson.M{})
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer cur.Close(ctx)
+	re := []bson.D{}
+	for cur.Next(ctx) {
+		var result bson.D
+		err := cur.Decode(&result)
+		if err != nil {
+			log.Fatal(err)
+		} else {
+			re = append(re, result)
+		}
+		if err := cur.Err(); err != nil {
+			log.Fatal(err)
+		}
+	}
+	println(re)
+	c.JSON(200, gin.H{
+		"users":re,
+	})
+}
+
+
+func main() {
+
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+	r.GET("/users", getUsers)
+	r.GET("/user/:name", returnGet)
+	r.Run("localhost:
+3002") // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+}
