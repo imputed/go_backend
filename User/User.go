@@ -9,18 +9,20 @@ import (
 	"webapp/api/utils"
 )
 
+const collectionName = "users"
+
 type User struct {
 	ID   primitive.ObjectID `bson:"_id,omitempty"`
-	Name string `bson:"name,omitempty"`
-	Role string `bson:"role,omitempty"`
-	Mail string `bson:"mail,omitempty"`
+	Name string             `bson:"name,omitempty"`
+	Role string             `bson:"role,omitempty"`
+	Mail string             `bson:"mail,omitempty"`
 }
 
 func GetUser(c *gin.Context) {
 	q := utils.GetQuery()
 	defer q.Close()
 
-	collection := q.Client.Database("test").Collection("users")
+	collection := utils.GetCollection(q, collectionName)
 	cur, err := collection.Find(q.Ctx, bson.M{})
 	if err != nil {
 		log.Println(err)
@@ -47,11 +49,13 @@ func GetUser(c *gin.Context) {
 func CreateUser(c *gin.Context) {
 	q := utils.GetQuery()
 	defer q.Close()
-	collection := q.Client.Database("test").Collection("users")
+	collection := utils.GetCollection(q, collectionName)
 
-	json:= User{}
-	c.BindJSON(&json)
-
+	json := User{}
+	err := c.BindJSON(&json)
+	if err != nil {
+		log.Println("An Error Occured while marshaling")
+	}
 	res, err := collection.InsertOne(q.Ctx, bson.M{"user": json})
 	if err != nil {
 		log.Println(err)
@@ -69,16 +73,15 @@ func FilterUser(c *gin.Context) {
 
 	id, _ := primitive.ObjectIDFromHex(c.Param("id"))
 
-	collection := q.Client.Database("test").Collection("users")
+	collection := utils.GetCollection(q, collectionName)
+
 	res, err := collection.Find(q.Ctx, bson.M{"_id": id})
-	var episodesFiltered []bson.M
-	if err = res.All(q.Ctx, &episodesFiltered); err != nil {
-		log.Fatal(err)
-	}
-	if err != nil {
+
+	var users []bson.M
+	if err = res.All(q.Ctx, &users); err != nil {
 		log.Fatal(err)
 	}
 	c.JSON(200, gin.H{
-		"user": episodesFiltered,
+		"user": users,
 	})
 }

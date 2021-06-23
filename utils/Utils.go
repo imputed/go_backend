@@ -8,6 +8,8 @@ import (
 	"time"
 )
 
+const dbName = "test"
+
 type Query struct {
 	Ctx    context.Context
 	Client *mongo.Client
@@ -20,6 +22,10 @@ func GetQuery() Query {
 	q.Ctx, q.Close = context.WithTimeout(context.Background(), 10*time.Second)
 	q.Client, q.Err = mongo.Connect(q.Ctx, options.Client().ApplyURI("mongodb://localhost:27017"))
 	return q
+}
+
+func GetCollection(q Query, collectionName string) *mongo.Collection {
+	return q.Client.Database(dbName).Collection(collectionName)
 }
 
 func CorsMiddleware() gin.HandlerFunc {
@@ -37,4 +43,3 @@ func CorsMiddleware() gin.HandlerFunc {
 		c.Next()
 	}
 }
-
