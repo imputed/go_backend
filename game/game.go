@@ -18,16 +18,14 @@ type Game struct {
 }
 
 type Round struct {
-	Winner []bool    `bson:"winner,omitempty"`
-	Value  []int32   `bson:"value,omitempty"`
-	Cards  [][]uint8 `bson:"cards,omitempty"`
+	Value []int32   `bson:"value,omitempty"`
+	Cards [][]uint8 `bson:"cards,omitempty"`
 }
 
 type UpdateGameStruct struct {
-	Winner []bool             `bson:"winner"`
-	Value  []int32            `bson:"value,omitempty"`
-	Cards  [][]uint8          `bson:"cards,omitempty"`
-	Game   primitive.ObjectID `bson:"game"`
+	Value []int32            `bson:"value,omitempty"`
+	Cards [][]uint8          `bson:"cards,omitempty"`
+	Game  primitive.ObjectID `bson:"game"`
 }
 type FindPlayersStruct struct {
 	Player []string `bson:"player"`
@@ -55,7 +53,7 @@ func UpdateGame(c *gin.Context) {
 	c.Bind(&json)
 	game := Game{}
 	collection := utils.GetCollection(q, collectionName)
-	round := Round{Winner: json.Winner, Value: json.Value, Cards: json.Cards}
+	round := Round{Value: json.Value, Cards: json.Cards}
 	update := bson.M{
 		"$push": bson.M{"rounds": round},
 	}

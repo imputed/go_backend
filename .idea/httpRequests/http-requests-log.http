@@ -1,0 +1,547 @@
+GET http://localhost:3002/user/total/fafa
+Accept: application/json
+
+<> 2021-06-23T185730.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{"value" : [50110,6,7,8],
+"game": "60d367e636e0bc04ee114651",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T185722.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{"value" : [50110,6,7,8],
+"game": "60d367e636e0bc04ee114651",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T185721.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{"value" : [50110,6,7,8],
+"game": "60d367e636e0bc04ee114651",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T185720.200.json
+
+###
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["fafa","Choreo","C","DE"]
+}
+
+<> 2021-06-23T185710.200.json
+
+###
+
+GET http://localhost:3002/user/total/Choreo
+Accept: application/json
+
+<> 2021-06-23T185549.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+"winner": [true,false,false,false],
+"value" : [500,6,7,8],
+"game": "60d3678ddb041f7cb5cf20d0",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T185546.200.json
+
+###
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["F","Choreo","C","DE"]
+}
+
+<> 2021-06-23T185541.200.json
+
+###
+
+GET http://localhost:3002/user/total/Choreo
+Accept: application/json
+
+<> 2021-06-23T185520.200.json
+
+###
+
+GET http://localhost:3002/user/total/Ch
+Accept: application/json
+
+<> 2021-06-23T185452.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+"winner": [true,false,false,false],
+"value" : [500,6,7,8],
+"game": "60d36744db041f7cb5cf20ca",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T185446.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+"winner": [true,false,false,false],
+"value" : [500,6,7,8],
+"game": "60d36744db041f7cb5cf20ca",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T185441.200.json
+
+###
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["Choreo","B","C","DE"]
+}
+
+<> 2021-06-23T185428.200.json
+
+###
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["Choreo","B","C","DE"]
+}
+
+<> 2021-06-23T185400.200.json
+
+###
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["Choreo","B","C","DE"]
+}
+
+<> 2021-06-23T185359-1.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+"winner": [true,false,false,false],
+"value" : [5,6,7,8],
+"game": "60d36333f8485e2ccae13349",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T185359.200.json
+
+###
+
+GET http://localhost:3002/user/total/Ch
+Accept: application/json
+
+<> 2021-06-23T185358-3.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+"winner": [true,false,false,false],
+"value" : [5,6,7,8],
+"game": "60d36333f8485e2ccae13349",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T185358-2.200.json
+
+###
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["Choreo","B","C","DE"]
+}
+
+<> 2021-06-23T185358-1.200.json
+
+###
+
+GET http://localhost:3002/user/total/Ch
+Accept: application/json
+
+<> 2021-06-23T185358.200.json
+
+###
+
+GET http://localhost:3002/user/total/Ch
+Accept: application/json
+
+<> 2021-06-23T185335-1.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+"winner": [true,false,false,false],
+"value" : [5,6,7,8],
+"game": "60d36333f8485e2ccae13349",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T185335.200.json
+
+###
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["Choreo","B","C","DE"]
+}
+
+<> 2021-06-23T185334.200.json
+
+###
+
+GET http://localhost:3002/user/total/Ch
+Accept: application/json
+
+<> 2021-06-23T184525.200.json
+
+###
+
+GET http://localhost:3002/user/total/Ch
+Accept: application/json
+
+<> 2021-06-23T184359.200.json
+
+###
+
+GET http://localhost:3002/user/total/Ch
+Accept: application/json
+
+###
+
+
+
+GET http://localhost:3002/user/total/Ch
+Accept: application/json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "value" : [5,6,7,8],
+  "game": "60d36333f8485e2ccae13349",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T183732.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [true,false,false,false],
+  "value" : [5,6,7,8],
+  "game": "60d36333f8485e2ccae13349",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T183727.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [true,false,false,false],
+  "value" : [5,6,7,8],
+  "game": "60d36333f8485e2ccae13349",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T183719.200.json
+
+###
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["Ch","B","C","DE"]
+}
+
+<> 2021-06-23T183707.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [true,false,false,false],
+  "value" : [5,6,7,8],
+  "game": "60d36333f8485e2ccae13349",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T183629.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [true,false,false,false],
+  "value" : [5,6,7,8],
+  "game": "60d35858cce12697855af164",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T183613.200.json
+
+###
+
+GET http://localhost:3002/user/total/Ch
+Accept: application/json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [false,true,false,false],
+  "value" : [1,772,3,4],
+  "game": "60d3620a594512208256a685",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T183301.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [false,true,false,false],
+  "value" : [1,2,3,4],
+  "game": "60d3620a594512208256a685",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T183252.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [false,true,false,false],
+  "value" : 46,
+  "game": "60d3620a594512208256a685",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T183224.400.txt
+
+###
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["Ch","B","C","DE"]
+}
+
+<> 2021-06-23T183210.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [false,true,false,false],
+  "value" : [1,2,3,4],
+  "game": "60d3494d736510e5237e8433",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T183119.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [false,true,false,false],
+  "amount" : [1,2,3,4],
+  "game": "60d3494d736510e5237e8433",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T182908.200.json
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [false,true,false,false],
+  "value" : 46,
+  "game": "60d3494d736510e5237e8433",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [false,true,false,false],
+  "value" : 46,
+  "game": "60d3494d736510e5237e8433",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T182457.400.txt
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [false,true,false,false],
+  "value" : 46,
+  "game": "60d3494d736510e5237e8433",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T182312.400.txt
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [true,false,false,false],
+  "value" : 46,
+  "game": "60d35858cce12697855af164",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T182237.400.txt
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [true,false,false,false],
+  "value" : 46,
+  "game": "60d35858cce12697855af164",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [true,false,false,false],
+  "value" : 46,
+  "game": "60d35858cce12697855af164",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T182034.400.txt
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{
+  "winner": [true,false,false,false],
+  "value" : 46,
+  "game": "60d35858cce12697855af164",
+  "cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+<> 2021-06-23T182031.400.txt
+
+###
+
+GET http://localhost:3002/user/total/Bene
+Accept: application/json
+
+###
+
+GET http://localhost:3002/user/total/Bene
+Accept: application/json
+
+###
+
+GET http://localhost:3002/user/total/Bene
+Accept: application/json
+
+###
+
