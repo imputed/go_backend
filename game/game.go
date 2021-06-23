@@ -1,5 +1,6 @@
 package game
 
+import "C"
 import (
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson"
@@ -17,11 +18,15 @@ type Game struct {
 }
 
 type Round struct {
-	Winner string `bson:"winner"`
+	Winner []bool    `bson:"winner,omitempty"`
+	Value  []int32   `bson:"value,omitempty"`
+	Cards  [][]uint8 `bson:"cards,omitempty"`
 }
 
 type UpdateGameStruct struct {
-	Winner string             `bson:"winner"`
+	Winner []bool             `bson:"winner"`
+	Value  []int32            `bson:"value,omitempty"`
+	Cards  [][]uint8          `bson:"cards,omitempty"`
 	Game   primitive.ObjectID `bson:"game"`
 }
 type FindPlayersStruct struct {
@@ -48,14 +53,15 @@ func UpdateGame(c *gin.Context) {
 	defer q.Close()
 	json := UpdateGameStruct{}
 	c.Bind(&json)
+	game := Game{}
 	collection := utils.GetCollection(q, collectionName)
-	round := Round{Winner: json.Winner}
+	round := Round{Winner: json.Winner, Value: json.Value, Cards: json.Cards}
 	update := bson.M{
 		"$push": bson.M{"rounds": round},
 	}
-	res := collection.FindOneAndUpdate(q.Ctx, bson.M{"_id": json.Game}, update)
+	collection.FindOneAndUpdate(q.Ctx, bson.M{"_id": json.Game}, update).Decode(&game)
 	c.JSON(200, gin.H{
-		"game": res,
+		"game": game,
 	})
 }
 
@@ -90,4 +96,46 @@ func FindGameByPlayers(c *gin.Context) {
 	c.JSON(200, gin.H{
 		"game": game,
 	})
+
+}
+
+func GetPlayerTotal(c *gin.Context) {
+	q := utils.GetQuery()
+	defer q.Close()
+	collection := utils.GetCollection(q, collectionName)
+	name := c.Param("name")
+	query := bson.D{
+		{
+			"player", name},
+	}
+	var result int32
+	cur, err := collection.Find(q.Ctx, query)
+	pos := -1
+	for cur.Next(q.Ctx) {
+
+		// create a value into which the single document can be decoded
+		game := Game{}
+		err := cur.Decode(&game)
+		if err != nil {
+			log.Fatal(err)
+		}
+		if pos == -1 {
+			for i := 0; i < len(game.Player); i++ {
+				if game.Player[i] == name {
+					pos = i
+					break
+				}
+			}
+		}
+		for _, r := range game.Rounds {
+			result += r.Value[pos]
+		}
+	}
+	if err != nil {
+		return
+	}
+	c.JSON(200, gin.H{
+		"result": result,
+	})
+
 }

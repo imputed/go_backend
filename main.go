@@ -16,6 +16,7 @@ func main() {
 	r.GET("/user", User.GetUser)
 	r.POST("/user", User.CreateUser)
 	r.GET("/user/:id", User.FilterUser)
+	r.GET("/user/total/:name", Game.GetPlayerTotal)
 	r.GET("/game/player/:p1/:p2/:p3/:p4", Game.FindGameByPlayers)
 	r.POST("/game", Game.CreateGame)
 	r.POST("/game/update", Game.UpdateGame)
