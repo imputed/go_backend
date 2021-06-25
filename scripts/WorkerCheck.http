@@ -1,0 +1,47 @@
+
+
+POST http://localhost:3002/game
+Content-Type: application/json
+
+{
+  "player": ["dfffdfdfaff","Choreo","C","namets"]
+}
+> {%
+   client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+###
+
+POST http://localhost:3002/game/update
+Content-Type: application/json Cookie: key=first-value
+
+{"value" : [11,6,7,8],
+"game": "60d442f773f111fbd1d3ebb6",
+"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
+}
+
+###
+
+GET http://localhost:3002/user/total/dfffdfdfaff
+Accept: application/json
+
+> {%
+    var c = response
+    client.test("Sum is completed", function() {
+        client.assert(c.body.result === 230, "Incorrect Sum");
+    });
+
+%}
+###
+
+DELETE http://localhost:3002/game/60d43da8ffd5f5c5ad92bb95
+Content-Type: application/json Cookie: key=first-value
+
+> {%
+    var c = response
+    client.test("One item deleted", function() {
+        client.assert(c.body.DeletedGameCount === 1, "Nothing to delete");
+    });
+

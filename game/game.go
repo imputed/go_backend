@@ -98,42 +98,74 @@ func FindGameByPlayers(c *gin.Context) {
 }
 
 func GetPlayerTotal(c *gin.Context) {
+	var (
+		pos    int
+		result int32
+	)
+	nameParameter := c.Param("name")
 	q := utils.GetQuery()
 	defer q.Close()
 	collection := utils.GetCollection(q, collectionName)
-	name := c.Param("name")
-	query := bson.D{
-		{
-			"player", name},
+	cur, err := collection.Find(q.Ctx, bson.D{{"player", nameParameter}})
+	if err != nil {
+		log.Panic(err)
 	}
-	var result int32
-	cur, err := collection.Find(q.Ctx, query)
-	pos := -1
-	for cur.Next(q.Ctx) {
 
-		// create a value into which the single document can be decoded
+	for cur.Next(q.Ctx) {
 		game := Game{}
 		err := cur.Decode(&game)
 		if err != nil {
-			log.Fatal(err)
+			log.Panic(err)
 		}
-		if pos == -1 {
-			for i := 0; i < len(game.Player); i++ {
-				if game.Player[i] == name {
-					pos = i
-					break
-				}
+		for i := 0; i < len(game.Player); i++ {
+			if game.Player[i] == nameParameter {
+				pos = i
+				break
 			}
 		}
-		for _, r := range game.Rounds {
-			result += r.Value[pos]
+		for i := range game.Rounds {
+			result += game.Rounds[i].Value[pos]
 		}
 	}
+
+	c.JSON(200, gin.H{
+		"result": result,
+	})
+}
+
+func DeleteGameById(c *gin.Context) {
+	q := utils.GetQuery()
+	defer q.Close()
+	collection := utils.GetCollection(q, collectionName)
+
+	id, _ := primitive.ObjectIDFromHex(c.Param("id"))
+	query := bson.M{
+		"_id": id,
+	}
+
+	obj, err := collection.DeleteOne(q.Ctx, query)
 	if err != nil {
 		return
 	}
+
 	c.JSON(200, gin.H{
-		"result": result,
+		"DeletedGameCount": obj.DeletedCount,
+	})
+
+}
+
+func DeleteAll(c *gin.Context) {
+	q := utils.GetQuery()
+	defer q.Close()
+	collection := utils.GetCollection(q, collectionName)
+
+	obj, err := collection.DeleteMany(q.Ctx, bson.M{})
+	if err != nil {
+		return
+	}
+
+	c.JSON(200, gin.H{
+		"DeletedGameCount": obj.DeletedCount,
 	})
 
 }
