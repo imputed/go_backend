@@ -26,7 +26,7 @@ func main() {
 	r.GET("/game/player/:p1/:p2/:p3/:p4", Game.FindGameByPlayers)
 	r.POST("/game", Game.CreateGame)
 	r.POST("/game/update", Game.UpdateGame)
-	r.DELETE("game/:id", Game.DeleteGameById)
+	r.DELETE("game/:id", Game.DeleteGameByID)
 	r.DELETE("game/", Game.DeleteAll)
 	r.POST("/login", func(c *gin.Context) {
 
