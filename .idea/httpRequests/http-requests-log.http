@@ -1,3 +1,607 @@
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Abitur",
+  "mail": "1test@test",
+  "role": "player1",
+  "password": ""
+}
+
+<> 2021-06-26T155411.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Abitur",
+  "mail": "1test@test",
+  "role": "player1",
+  "password": "aasdffffffffffffffffffffffffffffffffffffffffffffffffffffffffewrwegvzjtuzikuooooo12342345rdeztrezuhgfrdhrtrdatdewqdterzfgirzejfhrwderwagtertqsyqwAETWRFATHXDWRFUJZGEASRGSXAEHTWEQ$GWRFAY<Wefwsyraregooooooooooooooooooooooooooooooobab"
+}
+
+<> 2021-06-26T155325.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Abitur",
+  "mail": "1test@test",
+  "role": "player1",
+  "password": "aasdffffffffffffffffffffffffffffffffffffffffffffffffffffffffewrwegvzjtuzikuoooooooooooooooooooooooooooooooooooobab"
+}
+
+<> 2021-06-26T155305.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Abitur",
+  "mail": "1test@test",
+  "role": "player1",
+  "password": "abab"
+}
+
+<> 2021-06-26T155133.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Abitur",
+  "mail": "1test@test",
+  "role": "player1",
+  "password": "abab"
+}
+
+<> 2021-06-26T154519.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "aaaaBenedetto234234",
+  "mail": "test@test",
+  "role": "player",
+  "password": "12367658970797685743"
+}
+
+<> 2021-06-26T153908.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto234234",
+  "mail": "test@test",
+  "role": "player",
+  "password": "12367658970797685743"
+}
+
+<> 2021-06-26T151913.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto234234",
+  "mail": "test@test",
+  "role": "player",
+  "password": "12367658970797685743"
+}
+
+<> 2021-06-26T151736.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto234234",
+  "mail": "test@test",
+  "role": "player",
+  "password": "12367658970797685743"
+}
+
+<> 2021-06-26T151733.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T151646.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T151533.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T151349.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedetto",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T144122.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T144054.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T143701.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T143510.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T143508.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T143507.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T143446.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T143414.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T143411.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T143243.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+<> 2021-06-26T143222.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedik234t",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedikt",
+  "mail": "test@test",
+  "role": "player",
+  "password": "123",
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedikt",
+  "mail": "test@test",
+  "role": "player"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedikt",
+  "mail": "test@test",
+  "role": "player"
+}
+
+<> 2021-06-26T134018.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedikt",
+  "mail": "test@test",
+  "role": "player"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedikt",
+  "mail": "test@test",
+  "role": "player"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedikt",
+  "mail": "test@test",
+  "role": "player"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedikt",
+  "mail": "test@test",
+  "role": "player"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedikt",
+  "mail": "test@test",
+  "role": "player"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "Benedikt",
+  "mail": "test@test",
+  "role": "player"
+}
+
+###
+
 POST http://localhost:3002/login
 Content-Type: application/json Cookie: key=first-value
 
@@ -6,7 +610,7 @@ Content-Type: application/json Cookie: key=first-value
 "Password": "admin"
 }
 
-<> 2021-06-25T082541.200.json
+<> 2021-06-25T132942.200.json
 
 ###
 
@@ -18,7 +622,7 @@ Content-Type: application/json Cookie: key=first-value
 "Password": "admin"
 }
 
-<> 2021-06-25T082524.200.json
+<> 2021-06-25T132638.200.json
 
 ###
 
@@ -30,502 +634,7 @@ Content-Type: application/json Cookie: key=first-value
 "Password": "admin"
 }
 
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-"email" :   "admin@wesionary.team",
-"Password": "admin",
-}
-
-<> 2021-06-25T082235.401.json
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-"email" :   "admin@wesionary.team",
-"password": "admin",
-}
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-"email" :   "admin@wesionary.team",
-"password": "admin",
-}
-
-###
-
-POST http://localhost:3002/login
-Content-Type: multipart/form-data; boundary=WebAppBoundary
-
---WebAppBoundary
-Content-Disposition: form-data; email="field-name"
-
-
---WebAppBoundary
-
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-"email" :   "admin@wesionary.team",
-"password": "admin",
-}
---WebAppBoundary--
-
-<> 2021-06-25T080940.400.txt
-
-###
-
-POST http://localhost:80/api/item
-Content-Type: multipart/form-data; boundary=WebAppBoundary
-
---WebAppBoundary
-Content-Disposition: form-data; email="field-name"
-
-field-value
---WebAppBoundary--
-
-###
-
-POST http://localhost:80/api/item
-Content-Type: multipart/form-data; boundary=WebAppBoundary
-
---WebAppBoundary
-Content-Disposition: form-data; email="field-name"
-
-field-value
---WebAppBoundary--
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-"email" :   "admin@wesionary.team",
-"password": "admin",
-}
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-"email" :   "admin@wesionary.team",
-"password": "admin",
-}
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-"email" :   "admin@wesionary.team",
-"password": "admin",
-}
-
-<> 2021-06-25T080237.400.txt
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-"Email" :   "admin@wesionary.team",
-"Password": "admin",
-}
-
-<> 2021-06-25T080222.400.txt
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-"Email" :   "admin@wesionary.team",
-"Password": "admin",
-}
-
-<> 2021-06-25T080038.400.txt
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-  "Email" :   "admin@wesionary.team",
-"Password": "admin",
-
-}
-
-<> 2021-06-25T075917.400.txt
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-  "Email" :   "admin@wesionary.team",
-"Password": "admin",
-
-}
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-  "email" :   "admin@wesionary.team",
-"password": "admin",
-
-}
-
-<> 2021-06-25T075123.401.json
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/x-www-form-urlencoded
-
-{
-  "email" :   "admin@wesionary.team",
-"password": "admin",
-
-}
-
-<> 2021-06-25T074832.401.json
-
-###
-
-POST http://localhost:80/api/item
-Content-Type: application/x-www-form-urlencoded
-
-{
-  "email" :   "admin@wesionary.team",
-"password": "admin",
-
-}
-
-###
-
-POST http://localhost:3002/login
-Content-Type: multipart/form-data; boundary=WebAppBoundary
-
---WebAppBoundary
-Content-Disposition: form-data; name="field-name"
-
-field-value
---WebAppBoundary--
-
-<> 2021-06-25T074534.401.json
-
-###
-
-DELETE http://localhost:3002/game
-Content-Type: application/json
-
-POST http://localhost:3002/game
-Content-Type: application/json
-
-{
-  "player": ["dfffdfdfaff","Choreo","C","namets"]
-}
-
-<> 2021-06-24T144321.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffdfdfaff
-Accept: application/json
-
-<> 2021-06-24T103229.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [11,6,7,8],
-"game": "60d442f773f111fbd1d3ebb6",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T103218.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [11,6,7,8],
-"game": "60d442f773f111fbd1d3ebb6",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T103215.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [11,6,7,8],
-"game": "60d442f773f111fbd1d3ebb6",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T103213.200.json
-
-###
-
-POST http://localhost:3002/game
-Content-Type: application/json
-
-{
-  "player": ["dfffdfdfaff","Choreo","C","namets"]
-}
-
-<> 2021-06-24T103151.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-<> 2021-06-24T103125.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-<> 2021-06-24T103124.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-<> 2021-06-24T103104.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-<> 2021-06-24T103019.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-<> 2021-06-24T102857.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-<> 2021-06-24T102821.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [1123434341,6,7,8],
-"game": "60d441fdc754f0c13286b9ce",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102813.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [1123434341,6,7,8],
-"game": "60d441fdc754f0c13286b9ce",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102811.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [1121,6,7,8],
-"game": "60d441fdc754f0c13286b9ce",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102803.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [1121,6,7,8],
-"game": "60d441fdc754f0c13286b9ce",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102756.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [1121,6,7,8],
-"game": "60d441fdc754f0c13286b9ce",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102752.200.json
-
-###
-
-POST http://localhost:3002/game
-Content-Type: application/json
-
-{
-  "player": ["dfffaff","Choreo","C","namets"]
-}
-
-<> 2021-06-24T102741.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-<> 2021-06-24T102735.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-<> 2021-06-24T102613.200.json
-
-###
-
-GET http://localhost:3002/user/total/dfffaff
-Accept: application/json
-
-<> 2021-06-24T102558.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [2111121,6,7,8],
-"game": "60d441777979a8552117071f",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102552.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [221,6,7,8],
-"game": "60d441777979a8552117071f",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102545.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [221,6,7,8],
-"game": "60d441777979a8552117071f",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102544.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [221,6,7,8],
-"game": "60d441777979a8552117071f",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102542.200.json
-
-###
-
-POST http://localhost:3002/game/update
-Content-Type: application/json Cookie: key=first-value
-
-{"value" : [221,6,7,8],
-"game": "60d441777979a8552117071f",
-"cards": [[1,2,3,4,5,6,7,8],[9,10,11,12,13,14,15,16],[17,18,19,20,21,23,24],[25,26,27,28,29,30,31,32]]
-}
-
-<> 2021-06-24T102541.200.json
-
-###
-
-POST http://localhost:3002/game
-Content-Type: application/json
-
-{
-  "player": ["dfffaff","Choreo","C","namets"]
-}
-
-<> 2021-06-24T102527.200.json
-
-###
-
-DELETE http://localhost:3002/game/60d43da8ffd5f5c5ad92bb95
-Content-Type: application/json Cookie: key=first-value
-
-<> 2021-06-24T100941.200.json
+<> 2021-06-25T132430.200.json
 
 ###
 

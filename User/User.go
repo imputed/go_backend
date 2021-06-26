@@ -4,7 +4,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo"
 	"log"
+	"webapp/api/dto"
 
 	"webapp/api/utils"
 )
@@ -46,25 +48,17 @@ func GetUser(c *gin.Context) {
 	}
 }
 
-func CreateUser(c *gin.Context) {
+func CreateUser(registeruser dto.RegisterUser) (*mongo.InsertOneResult, error) {
 	q := utils.GetQuery()
 	defer q.Close()
 	collection := utils.GetCollection(q, collectionName)
 
-	json := User{}
-	err := c.BindJSON(&json)
-	if err != nil {
-		log.Println("An Error Occured while marshaling")
-	}
-	res, err := collection.InsertOne(q.Ctx, bson.M{"user": json})
+	res, err := collection.InsertOne(q.Ctx, bson.M{"user": User{Name: registeruser.Name, Mail: registeruser.Mail, Role: registeruser.Role}})
 	if err != nil {
 		log.Println(err)
-	} else {
-		c.JSON(200, gin.H{
-			"user": res,
-		})
+		return nil, err
 	}
-
+	return res, nil
 }
 
 func FilterUser(c *gin.Context) {

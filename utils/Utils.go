@@ -2,9 +2,13 @@ package utils
 
 import (
 	"context"
+	"crypto/aes"
+	"crypto/cipher"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"log"
+	"os"
 	"time"
 )
 
@@ -20,7 +24,7 @@ type Query struct {
 func GetQuery() Query {
 	q := Query{}
 	q.Ctx, q.Close = context.WithTimeout(context.Background(), 10*time.Second)
-	q.Client, q.Err = mongo.Connect(q.Ctx, options.Client().ApplyURI("mongodb://localhost:27017"))
+	q.Client, q.Err = mongo.Connect(q.Ctx, options.Client().ApplyURI("mongodb://127.0.0.1:27017"))
 	return q
 }
 
@@ -42,4 +46,19 @@ func CorsMiddleware() gin.HandlerFunc {
 
 		c.Next()
 	}
+}
+
+func Encrypt(text string) []byte {
+	key := os.Getenv("AES_KEY")
+	c, err := aes.NewCipher([]byte(key))
+	if err != nil {
+		log.Panic(err)
+	}
+	gcm, err := cipher.NewGCM(c)
+	if err != nil {
+		log.Panic(err)
+	}
+
+	nonce := make([]byte, gcm.NonceSize())
+	return gcm.Seal(nonce, nonce, []byte(text), nil)
 }
