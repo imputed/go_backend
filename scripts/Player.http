@@ -1,0 +1,7 @@
+POST http://localhost:3003/game
+Content-Type: application/json
+
+{
+  "player": ["1","2","f","4"],
+  "rounds": []
+}

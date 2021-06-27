@@ -6,10 +6,11 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"log"
+	"os"
 	"webapp/api/utils"
 )
 
-const collectionName = "games"
+const envCollectionSpecifier = "GameCollectionName"
 
 type Game struct {
 	ID     primitive.ObjectID `bson:"_id,omitempty"`
@@ -35,7 +36,7 @@ func CreateGame(c *gin.Context) {
 	q := utils.GetQuery()
 	defer q.Close()
 
-	collection := utils.GetCollection(q, collectionName)
+	collection := utils.GetCollection(q, os.Getenv("gamecollectionname"))
 	game := Game{}
 	err := c.BindJSON(&game)
 	if err != nil {
@@ -58,7 +59,7 @@ func UpdateGame(c *gin.Context) {
 		log.Panic("an error occurred during binding")
 	}
 	game := Game{}
-	collection := utils.GetCollection(q, collectionName)
+	collection := utils.GetCollection(q, os.Getenv("gamecollectionname"))
 	round := Round{Value: json.Value, Cards: json.Cards}
 	update := bson.M{
 		"$push": bson.M{"rounds": round},
@@ -75,7 +76,7 @@ func UpdateGame(c *gin.Context) {
 func FindGameByPlayers(c *gin.Context) {
 	q := utils.GetQuery()
 	defer q.Close()
-	collection := utils.GetCollection(q, collectionName)
+	collection := utils.GetCollection(q, os.Getenv("gamecollectionname"))
 
 	var b []string
 	b = append(b, c.Param("p1"))
@@ -114,7 +115,7 @@ func GetPlayerTotal(c *gin.Context) {
 	nameParameter := c.Param("name")
 	q := utils.GetQuery()
 	defer q.Close()
-	collection := utils.GetCollection(q, collectionName)
+	collection := utils.GetCollection(q, os.Getenv("gamecollectionname"))
 	cur, err := collection.Find(q.Ctx, bson.D{{"player", nameParameter}})
 	if err != nil {
 		log.Panic(err)
@@ -145,7 +146,7 @@ func GetPlayerTotal(c *gin.Context) {
 func DeleteGameByID(c *gin.Context) {
 	q := utils.GetQuery()
 	defer q.Close()
-	collection := utils.GetCollection(q, collectionName)
+	collection := utils.GetCollection(q, os.Getenv("gamecollectionname"))
 
 	id, _ := primitive.ObjectIDFromHex(c.Param("id"))
 	query := bson.M{
@@ -164,7 +165,7 @@ func DeleteGameByID(c *gin.Context) {
 func DeleteAll(c *gin.Context) {
 	q := utils.GetQuery()
 	defer q.Close()
-	collection := utils.GetCollection(q, collectionName)
+	collection := utils.GetCollection(q, os.Getenv("gamecollectionname"))
 	obj, err := collection.DeleteMany(q.Ctx, bson.M{})
 	if err != nil {
 		return

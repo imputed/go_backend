@@ -2,14 +2,12 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"go.mongodb.org/mongo-driver/mongo"
 	"webapp/api/dto"
 	"webapp/api/service"
 )
 
 type LoginController interface {
 	Login(ctx *gin.Context) string
-	Register(user dto.RegisterUser) (*mongo.InsertOneResult, error)
 }
 
 type loginController struct {
@@ -27,14 +25,9 @@ func LoginHandler(loginService service.LoginService, jWtService service.JWTServi
 func (controller *loginController) Login(c *gin.Context) string {
 	var credential dto.LoginCredentials
 	c.Bind(&credential)
-	isUserAuthenticated := controller.loginService.LoginUser(credential.Email, credential.Password)
+	isUserAuthenticated := controller.loginService.LoginUser(credential.Name, credential.Password)
 	if isUserAuthenticated {
-		return controller.jWtService.GenerateToken(credential.Email, true)
+		return controller.jWtService.GenerateToken(credential.Name, true)
 	}
 	return ""
-}
-
-func (controller *loginController) Register(registerUser dto.RegisterUser) (*mongo.InsertOneResult, error) {
-	res, _ := controller.loginService.Register(registerUser)
-	return res, nil
 }

@@ -6,12 +6,14 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"log"
+	"net/http"
+	"os"
 	"webapp/api/dto"
 
 	"webapp/api/utils"
 )
 
-const collectionName = "users"
+const envCollectionSpecifier = "UserCollectionName"
 
 type User struct {
 	ID   primitive.ObjectID `bson:"_id,omitempty"`
@@ -24,14 +26,14 @@ func GetUser(c *gin.Context) {
 	q := utils.GetQuery()
 	defer q.Close()
 
-	collection := utils.GetCollection(q, collectionName)
+	collection := utils.GetCollection(q, os.Getenv(envCollectionSpecifier))
 	cur, err := collection.Find(q.Ctx, bson.M{})
 	if err != nil {
 		log.Println(err)
 	} else {
-		re := []bson.D{}
+		re := []dto.RegisterUser{}
 		for cur.Next(q.Ctx) {
-			var result bson.D
+			result := dto.RegisterUser{}
 			err := cur.Decode(&result)
 			if err != nil {
 				log.Fatal(err)
@@ -43,7 +45,7 @@ func GetUser(c *gin.Context) {
 			}
 		}
 		c.JSON(200, gin.H{
-			"results": re,
+			"user": re,
 		})
 	}
 }
@@ -51,9 +53,9 @@ func GetUser(c *gin.Context) {
 func CreateUser(registeruser dto.RegisterUser) (*mongo.InsertOneResult, error) {
 	q := utils.GetQuery()
 	defer q.Close()
-	collection := utils.GetCollection(q, collectionName)
+	collection := utils.GetCollection(q, os.Getenv(envCollectionSpecifier))
 
-	res, err := collection.InsertOne(q.Ctx, bson.M{"user": User{Name: registeruser.Name, Mail: registeruser.Mail, Role: registeruser.Role}})
+	res, err := collection.InsertOne(q.Ctx, registeruser)
 	if err != nil {
 		log.Println(err)
 		return nil, err
@@ -66,16 +68,37 @@ func FilterUser(c *gin.Context) {
 	defer q.Close()
 
 	id, _ := primitive.ObjectIDFromHex(c.Param("id"))
+	user := dto.RegisterUser{}
+	collection := utils.GetCollection(q, os.Getenv(envCollectionSpecifier))
 
-	collection := utils.GetCollection(q, collectionName)
-
-	res, err := collection.Find(q.Ctx, bson.M{"_id": id})
-
-	var users []bson.M
-	if err = res.All(q.Ctx, &users); err != nil {
-		log.Fatal(err)
+	err := collection.FindOne(q.Ctx, bson.M{"_id": id}).Decode(&user)
+	if err != nil {
+		log.Panic("user not found")
 	}
 	c.JSON(200, gin.H{
-		"user": users,
+		"user": user,
 	})
+}
+
+func Register(c *gin.Context) {
+	q := utils.GetQuery()
+	defer q.Close()
+	collection := utils.GetCollection(q, os.Getenv(envCollectionSpecifier))
+	registerUser := dto.RegisterUser{}
+	err := c.Bind(&registerUser)
+	if err != nil {
+		log.Panic("registering user not possible")
+	}
+	registerUser.EncryptedPassword = utils.Encrypt(registerUser.Password)
+	res, err := collection.InsertOne(q.Ctx, registerUser)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"Error": "An error occured during registration",
+		})
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"res": res,
+	})
+
 }
