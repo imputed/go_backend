@@ -7,7 +7,7 @@ import (
 )
 
 type LoginController interface {
-	Login(ctx *gin.Context) string
+	Login(ctx *gin.Context) (string, dto.ReturnUser)
 }
 
 type loginController struct {
@@ -22,12 +22,12 @@ func LoginHandler(loginService service.LoginService, jWtService service.JWTServi
 	}
 }
 
-func (controller *loginController) Login(c *gin.Context) string {
+func (controller *loginController) Login(c *gin.Context) (string, dto.ReturnUser) {
 	var credential dto.LoginCredentials
-	c.Bind(&credential)
-	isUserAuthenticated := controller.loginService.LoginUser(credential.Name, credential.Password)
+	c.BindJSON(&credential)
+	isUserAuthenticated, user := controller.loginService.LoginUser(credential.Name, credential.Password)
 	if isUserAuthenticated {
-		return controller.jWtService.GenerateToken(credential.Name, true)
+		return controller.jWtService.GenerateToken(credential.Name, true), user
 	}
-	return ""
+	return "", user
 }

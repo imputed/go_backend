@@ -23,7 +23,7 @@ func main() {
 	r := gin.Default()
 	r.Use(utils.CorsMiddleware())
 	r.GET("/user", User.GetUser)
-	r.GET("/user/:id", User.FilterUser)
+	r.GET("/user/:id", User.FilterUserByID)
 
 	r.GET("/user/total/:name", Game.GetPlayerTotal)
 
@@ -33,12 +33,14 @@ func main() {
 	r.DELETE("game/:id", Game.DeleteGameByID)
 	r.DELETE("game/", Game.DeleteAll)
 	r.POST("/register", User.Register)
+	r.POST("/validate", service.ValidateTokenAndReturnUser)
 	r.POST("/login", func(c *gin.Context) {
-		token := loginController.Login(c)
+		token, user := loginController.Login(c)
 		jwtService.ValidateToken(token)
 		if token != "" {
 			c.JSON(http.StatusOK, gin.H{
 				"token": token,
+				"user":  user,
 			})
 		} else {
 			c.JSON(http.StatusUnauthorized, nil)

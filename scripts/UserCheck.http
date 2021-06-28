@@ -1,23 +1,23 @@
 GET http://localhost:3003/user/60d753f1290a60e7d820df90
 
 ###
-POST http://localhost:3003/login
+POST http://localhost:3002/login
 Content-Type: application/json
 
 {
-  "name": "BeneTest",
-  "password": "player1"
+  "name": "BE",
+  "password": "player"
 }
 
 ###ee
-POST http://localhost:3003/register
+POST http://localhost:3002/register
 Content-Type: application/json
 
 {
- "name": "BeneTest123",
+ "name": "BE",
   "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
+  "role": "player",
+  "password": "player"
 }
 
 

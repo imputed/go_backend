@@ -24,7 +24,7 @@ type Query struct {
 func GetQuery() Query {
 	q := Query{}
 	q.Ctx, q.Close = context.WithTimeout(context.Background(), 10*time.Second)
-	q.Client, q.Err = mongo.Connect(q.Ctx, options.Client().ApplyURI("mongodb://127.0.0.1:27017"))
+	q.Client, q.Err = mongo.Connect(q.Ctx, options.Client().ApplyURI(os.Getenv("MONGODB")))
 	return q
 }
 

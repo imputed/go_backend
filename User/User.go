@@ -63,7 +63,7 @@ func CreateUser(registeruser dto.RegisterUser) (*mongo.InsertOneResult, error) {
 	return res, nil
 }
 
-func FilterUser(c *gin.Context) {
+func FilterUserByID(c *gin.Context) {
 	q := utils.GetQuery()
 	defer q.Close()
 
@@ -73,13 +73,27 @@ func FilterUser(c *gin.Context) {
 
 	err := collection.FindOne(q.Ctx, bson.M{"_id": id}).Decode(&user)
 	if err != nil {
-		log.Panic("user not found")
+		c.JSON(http.StatusNotFound, gin.H{
+			"user": user,
+		})
 	}
 	c.JSON(200, gin.H{
 		"user": user,
 	})
 }
+func FilterUserByName(name string) dto.ReturnUser {
+	q := utils.GetQuery()
+	defer q.Close()
 
+	user := dto.ReturnUser{}
+	collection := utils.GetCollection(q, os.Getenv(envCollectionSpecifier))
+
+	err := collection.FindOne(q.Ctx, bson.M{"name": name}).Decode(&user)
+	if err != nil {
+		log.Panic("User Not Found q")
+	}
+	return user
+}
 func Register(c *gin.Context) {
 	q := utils.GetQuery()
 	defer q.Close()

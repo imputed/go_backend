@@ -1,3 +1,391 @@
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "BE",
+  "password": "player"
+}
+
+<> 2021-06-27T123345.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "BE",
+  "mail": "1tefffst@test",
+  "role": "player",
+  "password": "player"
+}
+
+<> 2021-06-27T123321.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "B",
+  "mail": "1tefffst@test",
+  "role": "player",
+  "password": "player"
+}
+
+<> 2021-06-27T123212.500.json
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "111111211BeneTfffest123",
+  "password": "player"
+}
+
+<> 2021-06-27T122954.401.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "111111211BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player",
+  "password": "player"
+}
+
+<> 2021-06-27T122902.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "111111211BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player",
+  "password": "player"
+}
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "1211BeneTfffest123",
+  "password": "player111"
+}
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "1211BeneTfffest123",
+  "password": "player111"
+}
+
+<> 2021-06-27T122522.401.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "1211BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player111"
+}
+
+<> 2021-06-27T122447.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "1211BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player111"
+}
+
+<> 2021-06-27T122414.200.json
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "1211BeneTfffest123",
+  "password": "player111"
+}
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "1211BeneTfffest123",
+  "password": "player111"
+}
+
+<> 2021-06-27T122232.401.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "1211BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player111"
+}
+
+<> 2021-06-27T122148.200.json
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "1BeneTfffest123",
+  "password": "player1"
+}
+
+<> 2021-06-27T122111.401.json
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "1BeneTfffest123",
+  "password": "player1"
+}
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "1BeneTfffest123",
+  "password": "player11"
+}
+
+<> 2021-06-27T121938.401.json
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "1BeneTfffest123",
+  "password": "player11"
+}
+
+<> 2021-06-27T121819.401.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "1BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player11"
+}
+
+<> 2021-06-27T121802.200.json
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "BeneTfffest123",
+  "password": "player1"
+}
+
+<> 2021-06-27T121733.401.json
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "BeneTfffest123",
+  "password": "player1"
+}
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "BeneTfffest123",
+  "password": "player1"
+}
+
+<> 2021-06-27T121216.401.json
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "BeneTfffest123",
+  "password": "player1"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player1"
+}
+
+<> 2021-06-27T120911.200.json
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player1"
+}
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "BeneTfffest123",
+  "password": "player1"
+}
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "BeneTfffest123",
+  "password": "player1"
+}
+
+<> 2021-06-27T120555.401.json
+
+###
+
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "name": "BeneTfffest123",
+  "password": "player1"
+}
+
+<> 2021-06-27T120436.401.json
+
+###
+
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+  "name": "BeneTfffest123",
+  "password": "player1"
+}
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+ "name": "BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player1"
+}
+
+<> 2021-06-27T120348.200.json
+
+###
+
+POST http://localhost:3003/register
+Content-Type: application/json
+
+{
+ "name": "BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player1"
+}
+
+###
+
+POST http://localhost:3003/register
+Content-Type: application/json
+
+{
+ "name": "BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player1"
+}
+
+###
+
+POST http://localhost:3003/register
+Content-Type: application/json
+
+{
+ "name": "BeneTfffest123",
+  "mail": "1tefffst@test",
+  "role": "player1",
+  "password": "player1"
+}
+
+###
+
 POST http://localhost:3003/register
 Content-Type: application/json
 
@@ -177,393 +565,6 @@ Content-Type: application/json
 }
 
 <> 2021-06-26T182323.401.json
-
-###
-
-POST http://localhost:3003/login
-Content-Type: application/json
-
-{
-  "name": "BeneTest",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/login
-Content-Type: application/json
-
-{
-  "name": "BeneTest",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/json
-
-{
-  "name": "BeneTest",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "BeneTest",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-<> 2021-06-26T182105.200.json
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/json
-
-{
-  "name": "BeneTest",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "BeneTest",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-<> 2021-06-26T182030.200.json
-
-###
-
-POST http://localhost:3002/user/delete
-Content-Type: application/json
-
-{}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibanhmhgmhmhgmba",
-  "mail": "1tefffst@test",
-  "role": "player1f",
-  "password": "player1"
-}
-
-<> 2021-06-26T181818.200.json
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibanhmhgmhmhgmba",
-  "mail": "1tefffst@test",
-  "role": "player1f",
-  "password": "player1"
-}
-
-<> 2021-06-26T181606.200.json
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibanhmhgmhmhgmba",
-  "mail": "1tefffst@test",
-  "role": "player1f",
-  "password": "player1"
-}
-
-<> 2021-06-26T181604.200.json
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibanhmhgmhmhgmba",
-  "mail": "1tefffst@test",
-  "role": "player1f",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibanhmhgmhmhgmba",
-  "mail": "1tefffst@test",
-  "role": "player1f",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3002/login
-Content-Type: application/json
-
-{
-  "name": "Alibaba",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibanhmhgmhmhgmba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibanhmhgmhmhgmba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibanhmhgmhmhgmba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-<> 2021-06-26T180622.200.json
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibaba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-<> 2021-06-26T180418.200.json
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibaba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-<> 2021-06-26T180413.200.json
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibaba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibaba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "232Alibaba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1tefffst@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1test@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-<> 2021-06-26T175056.200.json
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1test@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1test@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1test@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1test@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3003/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1test@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3002/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1test@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3002/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1test@test",
-  "role": "player1",
-  "password": "player1"
-}
-
-###
-
-POST http://localhost:3002/register
-Content-Type: application/json
-
-{
- "name": "2Alibaba",
-  "mail": "1test@test",
-  "role": "player1",
-  "password": "player1"
-}
 
 ###
 
